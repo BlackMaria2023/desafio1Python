@@ -1,14 +1,17 @@
 import math
 
 
-radio = float(input("ingrese el radio en kilometros"))
-gravedad = float(input("ingrese la constante gravedad"))
+radio_km = float(input("ingrese el radio en kilometros: "))
+gravedad = float(input("ingrese la constante gravedad: "))
 
-velocidad_de_escape = radio * gravedad
+radio_m = radio_km * 1000
+
+
+velocidad_de_escape = math.sqrt(2 * gravedad * radio_m)
 
 
 
-print(f"la velocidad de escape es : {math.sqrt(2 * velocidad_de_escape)}")
+print(f"la velocidad de Escape es : {velocidad_de_escape} [m/s]")
 
  
 
